@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+html {
+   scroll-behavior: smooth; 
+} 
+
+body {
+    margin: 0;
+    background-color: #0f0f0f;
+    font-family: Cabin, Arial;
+    
+    
+}
+
+.top-container {
+    background-color: 273036;
+    display: grid;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.theting {
+    
+    font-size: 75px;
+    margin-top: 50%;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff200, 0 0 20px #fff200, 0 0 30px #fff200, 0 0 10px #fff200, 0 0 20px #fff200, 0 0 30px #fff200, 0 0 40px #fff200;
+    }
+
+  }
+
+
+
+
+.title, h5 {
+    transition-duration: 0.4s;
+}
+
+.title:hover {
+    color: #fff200;
+    cursor: DEFAULT;
+}
+
+.top-container h5:hover {
+    color: #fff200;
+    cursor: DEFAULT;
+}
+
+.technologies-top img {
+    width: 30px;
+    border-radius: 20%;
+    margin-right: 10px;
+}
+
+.technologies-top h5 {
+    margin-bottom: 12px;
+}
+
+.container-item-1 img {
+    width: 20px;
+    margin-right: 15px;
+    transition: 0.2s;
+}
+
+.container-item-1 img:hover {
+    width: 22px;
+}
+
+.hidden-discord-box {
+    background-color: #242424;
+    color: white;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+    position: absolute;
+    top: 100%; /* Positioning below the image */
+    left: 0;
+    width: max-content;
+    transform: translateY(10px); /* Space between image and box */
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.discord-btn:hover + .hidden-discord-box {
+    display: block;
+}
+
+.work-experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-inline: 3%;
+}
+
+.work-experience-container div {
+    background-color: rgba(255, 191, 0, 0.8); /* semi-transparent */
+    height: 300px;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 255, 255);
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px); /* Apply blur effect to background */
+}
+
+.work-experience-container .category-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.041), rgb(66, 62, 79)), 
+        url('./photos/image-2.png');
+    background-size: cover;
+    background-position: top;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.work-experience-container .category-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.041), rgb(66, 62, 79)), 
+    url('./photos/image-1.png');
+    background-size: cover;
+    background-position: top;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.work-experience-container .category-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.041), rgb(66, 62, 79)), 
+    url('./photos/image-3.png');
+    background-size: cover;
+    background-position: top;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.work-experience-container h3 {
+    margin-inline: 10px;
+    color: aliceblue;
+}
+
+.work-experience-container .category-1:hover, .category-2:hover, .category-3:hover {
+    box-shadow: 2px 2px 20px .1px #0f0f0f;
+    border-color: #fff200;
+}
+
+.work-experience-container .category-1, .category-2, .category-3 {
+    transition: .35s;
+    cursor: pointer;
+}
+
+.mc-server-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-inline: 5%;
+    margin-top: 50px;
+    color: aliceblue;
+}
+
+.mc-server-big-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    color: aliceblue;
+    justify-content: center;
+    align-self: center;
+}
+
+.mc-server-img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    color: aliceblue;
+    justify-content: center;
+    
+    
+}
+
+.mc-server-container img {
+    width: 50%;
+    justify-self: end;
+    margin-left: 50%;
+    
+}
+
+.mc-server-img-container img {
+    width: 70%;
+    object-fit: cover;
+    margin-left: 10%;
+    margin-top: 10px;
+    
+}
+
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0f0f0f; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures the button is on top of other elements */
+}
+
+
+
+
+
+
+
+/* Leave this at the bottom */
+/* Responsive Media */
+@media only screen and (max-width: 768px) {
+    .theting {font-size: 40px}
+    .top-container {margin-left: 20%; margin-right: 20%;}
+    .mc-server-container img {width: 80%; margin-left: 0%;}
+    .mc-server-img-container { display: none;} 
+}
+
+
