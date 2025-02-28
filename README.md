@@ -3,6 +3,6 @@
 Made with pure HTML, CSS and Javascript!
 
 ## Check My Portfolio
-Link: [skelldev.pages.dev](https://skelldev.pages.dev/)
+Link: `oops, not available no more`
 
 ### 🧡 Made by Skell! Please do not redistribute without permission!
